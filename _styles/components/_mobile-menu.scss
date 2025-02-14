@@ -1,0 +1,38 @@
+.mobile-menu {
+  @apply fixed z-mobile-menu top-0 right-0 h-full w-full translate-x-full;
+  @apply bg-white; // ? Body color?
+
+  transition: var(--transition-drawer-out);
+
+  &.is-open {
+    @apply translate-x-0;
+    transition: var(--transition-drawer-in);
+  }
+}
+
+.mobile-menu__body {
+  @apply pt-20 pb-8;
+}
+
+.mobile-menu__secondary-menu {
+  @apply grid grid-cols-2 gap-4 uppercase;
+}
+
+.mm-sublist {
+  --sublist-item-spacing: 20px;
+
+  @apply flex flex-col gap-5 py-3;
+
+  svg {
+    @apply h-4 w-auto;
+  }
+}
+
+.mm-sublist__item {
+  padding: 0 var(--sublist-item-spacing);
+}
+
+.mm-sublist__item-inner {
+  @apply flex items-center;
+  column-gap: var(--sublist-item-spacing);
+}

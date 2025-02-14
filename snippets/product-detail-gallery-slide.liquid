@@ -1,0 +1,35 @@
+{%- comment %}
+
+  Product Detail Gallery Slide
+  ------------------------------------------------------------------------------
+
+  Usage:
+
+  {% render 'product-detail-gallery-slide',
+             image: { image } - required
+  %}
+
+{% endcomment -%}
+
+{% if image != blank %}
+  {%- liquid
+    assign loading = 'lazy'
+    
+    capture main_image_widths
+      render 'image-widths', max_width: 1100
+    endcapture
+  -%}
+  
+  <div class="relative aspect-square swiper-slide">
+    {{
+      image
+      | image_url: width: 720
+      | image_tag:
+        loading: loading,
+        widths: main_image_widths,
+        sizes: '100vw',
+        alt: image.alt,
+        class: 'h-full w-full object-contain lazy-image'
+    }}
+  </div>     
+{% endif %}

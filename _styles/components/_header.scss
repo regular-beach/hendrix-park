@@ -1,0 +1,49 @@
+header.header {
+  @apply fixed z-header top-0 left-0 right-0 bg-white/50;
+  height: var(--header-height);
+
+  nav {
+    ul {
+      @apply flex gap-x-2;
+    }
+
+    a {
+      &[aria-current="page"] {
+        @apply underline
+      }
+    }
+  }
+}
+
+.header-logo {
+  @apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2;
+  width: var(--header-logo-width);
+}
+
+.header-main {
+  @apply flex justify-between items-center;
+}
+
+.header-cart-count {
+  @apply absolute opacity-0;
+  top: 15px;
+  right: -10px;
+
+  .has-items & {
+    @apply opacity-100;
+  }
+}
+
+.header-nav {
+
+}
+
+.header-nav__list {
+  // z to push above the drawer
+  @apply relative z-1 flex items-center gap-x-4;
+  height: var(--header-height);
+}
+
+.header-nav__item {
+  @apply relative h-full flex items-center;
+}

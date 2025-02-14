@@ -1,0 +1,23 @@
+.product-detail-gallery {
+  @apply mb-5 lg:mb-0;
+
+  display: none;
+
+  &.is-active {
+    display: block;
+  }
+
+  .swiper-container {
+    @apply relative w-full overflow-hidden lg:hidden;
+  }  
+
+  &__list {
+    @apply hidden flex-col gap-y-3 lg:flex;
+  }
+}
+
+.product-detail-form {
+  --pdf-padding-h: clamp(30px, 10px + 3.9vw, 80px);
+
+  padding: 0 var(--pdf-padding-h);
+}

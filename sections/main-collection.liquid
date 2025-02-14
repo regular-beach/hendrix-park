@@ -1,0 +1,48 @@
+{%- comment %}
+
+  Collection Main Section
+  ------------------------------------------------------------------------------
+
+{% endcomment -%}
+
+{% paginate collection.products by 500 %}
+
+<div
+  data-section-id="{{ section.id }}"
+  data-section-type="collection"
+>
+  <div class="mb-8 lg:mb-10">
+    <div class="container">
+      <h1 class="text-xl text-center">
+        {{ collection.title }}
+      </h1>
+    </div>    
+  </div>
+
+  {% if collection.products.size > 0 %}   
+    <div class="product-grid">   
+      {% for product in collection.products %}
+        <div class="product-grid__item">
+          {% render 'product-card',
+                      product: product
+          %}
+        </div>
+      {% endfor %}
+    </div>
+  {% else %}
+    <div class="container">
+      <p>Nothing Found..</p>
+    </div>
+  {% endif %}
+</div>
+
+{% endpaginate %}
+
+{% schema %}
+{
+  "name": "Collection - Main",
+  "settings": [
+
+  ]
+}
+{% endschema %}
