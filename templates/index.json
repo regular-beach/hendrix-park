@@ -15,26 +15,21 @@
         "title": ""
       }
     },
-    "main_collection_3a3Prt": {
-      "type": "main-collection",
-      "settings": {}
-    },
     "featured_products_9YFgNN": {
       "type": "featured-products",
       "settings": {
-        "title": "Featured Products",
+        "title": "hendrix park industrial hitters",
         "subtitle": "",
         "cta_title": "",
         "cta_url": "",
-        "source": "product_list",
+        "source": "collection",
         "product_list": [],
-        "collection": ""
+        "collection": "frontpage"
       }
     }
   },
   "order": [
     "hero",
-    "main_collection_3a3Prt",
     "featured_products_9YFgNN"
   ]
 }
