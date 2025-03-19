@@ -1,10 +1,40 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "hero": {
-      "type": "page-hero"
+      "type": "page-hero",
+      "settings": {
+        "title": ""
+      }
+    },
+    "main_collection_3a3Prt": {
+      "type": "main-collection",
+      "settings": {}
+    },
+    "featured_products_9YFgNN": {
+      "type": "featured-products",
+      "settings": {
+        "title": "Featured Products",
+        "subtitle": "",
+        "cta_title": "",
+        "cta_url": "",
+        "source": "product_list",
+        "product_list": [],
+        "collection": ""
+      }
     }
   },
   "order": [
-    "hero"
+    "hero",
+    "main_collection_3a3Prt",
+    "featured_products_9YFgNN"
   ]
 }
