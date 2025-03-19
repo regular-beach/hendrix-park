@@ -1,2 +1,8 @@
 templates/*.json
 config/settings_data.json
+sections/
+snippets/
+assets/
+layout/
+templates/cart.json.liquid
+config/settings_schema.json
