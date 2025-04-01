@@ -1,23 +1,25 @@
 header.header {
-  @apply fixed z-header top-0 left-0 right-0 bg-white/50;
+  @apply fixed z-header top-0 left-0 right-0 bg-white; // Removed opacity to remove blur
   height: var(--header-height);
+}
 
-  nav {
-    ul {
-      @apply flex gap-x-2;
-    }
+nav ul {
+  @apply flex gap-x-2;
+}
 
-    a {
-      &[aria-current="page"] {
-        @apply underline
-      }
-    }
-  }
+nav a[aria-current="page"] {
+  @apply underline;
 }
 
 .header-logo {
   @apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2;
-  width: var(--header-logo-width);
+  width: 300px;  // Increased logo size
+  height: auto;
+}
+
+.header-logo img {
+  width: 100%;
+  height: auto;
 }
 
 .header-main {
@@ -34,12 +36,7 @@ header.header {
   }
 }
 
-:root {
-  --header-logo-width: 200px; // Adjust to your desired size
-}
-
 .header-nav__list {
-  // z to push above the drawer
   @apply relative z-1 flex items-center gap-x-4;
   height: var(--header-height);
 }
@@ -47,3 +44,11 @@ header.header {
 .header-nav__item {
   @apply relative h-full flex items-center;
 }
+
+// Dropdown styles for "Index"
+.header-nav__dropdown {
+  @apply absolute left-0 mt-2 hidden bg-white shadow-lg;
+}
+
+// JavaScript for dropdown toggle
+

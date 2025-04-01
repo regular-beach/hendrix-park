@@ -25,3 +25,22 @@ export default class HeaderSection extends BaseSection {
     this.primaryNavLinks.forEach(link => setAriaCurrent(link, currentPath))
   }  
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+  const indexButton = document.getElementById("index-button");
+  const dropdownMenu = document.getElementById("dropdown-menu");
+
+  if (indexButton && dropdownMenu) {
+    indexButton.addEventListener("click", function (event) {
+      event.stopPropagation(); // Prevents click from closing immediately
+      dropdownMenu.classList.toggle("hidden");
+    });
+
+    // Close dropdown when clicking outside
+    document.addEventListener("click", function (event) {
+      if (!dropdownMenu.contains(event.target) && event.target !== indexButton) {
+        dropdownMenu.classList.add("hidden");
+      }
+    });
+  }
+});
