@@ -5,25 +5,23 @@
   role="banner"
 >
   <a href="{{ routes.root_url }}" title="{{ shop.name }}" class="header-logo">
-    Logo Goes Here
-    <span class="sr-only">{{ shop.name }} logo</span>
-  </a> 
+    <img src="{{ 'HPLOGO.png' | asset_url }}" alt="{{ shop.name }} logo">
+  </a>
 
   <div class="container">
     <div class="header-main">
       <div class="header-nav">
         <nav class="header-nav__list" aria-label="Main" data-primary-nav>
           <ul>
-            <li>
-              <button
-                class="header-nav__item"
-                aria-label="Open Menu"
-                data-mobile-menu-toggle
-              >
-                Menu
+            <li class="header-nav__dropdown">
+              <button class="header-nav__item" aria-expanded="false">
+                Index
               </button>
+              <ul class="header-nav__dropdown-menu">
+                <li><a href="/pages/about" class="header-nav__item">About</a></li>
+                <li><a href="/blogs/news" class="header-nav__item">Blog</a></li>
+              </ul>
             </li>
-
             {% for link in linklists[section.settings.primary_menu].links %}
               <li>
                 <a
@@ -52,52 +50,25 @@
           >
             Cart <span class="header-cart-count" data-count>{{ cart.item_count }}</span>
           </a>
-        
-          <a
-            href="{{ routes.search_url }}"
-            class="header-nav__item"
-          >
-            {{- 'icon-search.svg' | inline_asset_content -}}
-            <span class="sr-only">Search icon</span>
-          </a>
         </div>  
       </div>
     </div>
   </div>
 </header>
 
-{% comment %}
-  Borrowed from Dawn
-  Not sure why they put it in the header but I'm copying them...
-{% endcomment %}
-<script type="application/ld+json">
-  {
-    "@context": "http://schema.org",
-    "@type": "Organization",
-    "name": {{ shop.name | json }},
-    {% if shop.brand.logo %}
-      "logo": {{ shop.brand.logo | image_url: width: 500 | prepend: "https:" | json }},
-    {% endif %}
-    "sameAs": [
-      {{ settings.social_link_twitter   | json }},
-      {{ settings.social_link_facebook  | json }},
-      {{ settings.social_link_youtube   | json }},
-      {{ settings.social_link_tiktok    | json }},
-      {{ settings.social_link_instagram | json }}
-    ],
-    "url": {{ request.origin | append: page.url | json }}
+<style>
+  .header-nav__dropdown {
+    position: relative;
   }
-</script>
-
-{% schema %}
-{
-  "name": "Header",
-  "settings": [
-    {
-      "type": "link_list",
-      "id": "primary_menu",
-      "label": "Primary Menu" 
-    }
-  ]
-}
-{% endschema %}
+  .header-nav__dropdown-menu {
+    display: none;
+    position: absolute;
+    background: white;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .header-nav__dropdown:hover .header-nav__dropdown-menu {
+    display: block;
+  }
+</style>
