@@ -34,8 +34,8 @@ header.header {
   }
 }
 
-.header-nav {
-
+:root {
+  --header-logo-width: 200px; // Adjust to your desired size
 }
 
 .header-nav__list {
