@@ -13,7 +13,7 @@
       "header": {
         "type": "header",
         "settings": {
-          "primary_menu": "main-menu"
+          "primary_menu": ""
         }
       },
       "mobile-menu": {

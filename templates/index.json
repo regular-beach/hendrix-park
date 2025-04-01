@@ -12,6 +12,7 @@
     "hero": {
       "type": "page-hero",
       "settings": {
+        "image": "shopify://shop_images/bitmap_beach.png",
         "title": ""
       }
     },
