@@ -44,3 +44,21 @@ export default class FooterSection extends BaseSection {
     this.navLinks.forEach(link => setAriaCurrent(link, currentPath))
   }  
 }
+
+function updateDateTime() {
+  const now = new Date();
+  const options = { 
+    weekday: 'long', 
+    year: 'numeric', 
+    month: 'long', 
+    day: 'numeric', 
+    hour: '2-digit', 
+    minute: '2-digit', 
+    second: '2-digit', 
+    timeZoneName: 'short' 
+  };
+  document.getElementById('current-datetime').textContent = now.toLocaleString(undefined, options);
+}
+
+updateDateTime();
+setInterval(updateDateTime, 1000); // Update every second
