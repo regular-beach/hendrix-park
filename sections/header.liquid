@@ -14,10 +14,10 @@
         <nav class="header-nav__list" aria-label="Main" data-primary-nav>
           <ul>
             <li class="header-nav__dropdown">
-              <button class="header-nav__item" aria-expanded="false">
+              <button id="index-button" class="header-nav__item" aria-expanded="false">
                 Index
               </button>
-              <ul class="header-nav__dropdown-menu">
+              <ul id="dropdown-menu" class="header-nav__dropdown-menu hidden">
                 <li><a href="/pages/about" class="header-nav__item">About</a></li>
                 <li><a href="/blogs/news" class="header-nav__item">Blog</a></li>
               </ul>
@@ -56,19 +56,3 @@
   </div>
 </header>
 
-<style>
-  .header-nav__dropdown {
-    position: relative;
-  }
-  .header-nav__dropdown-menu {
-    display: none;
-    position: absolute;
-    background: white;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  .header-nav__dropdown:hover .header-nav__dropdown-menu {
-    display: block;
-  }
-</style>

@@ -33,13 +33,13 @@ document.addEventListener("DOMContentLoaded", function () {
   if (indexButton && dropdownMenu) {
     indexButton.addEventListener("click", function (event) {
       event.stopPropagation(); // Prevents click from closing immediately
-      dropdownMenu.classList.toggle("hidden");
+      dropdownMenu.classList.toggle("active");
     });
 
     // Close dropdown when clicking outside
     document.addEventListener("click", function (event) {
       if (!dropdownMenu.contains(event.target) && event.target !== indexButton) {
-        dropdownMenu.classList.add("hidden");
+        dropdownMenu.classList.remove("active");
       }
     });
   }
