@@ -12,14 +12,13 @@
     "hero": {
       "type": "page-hero",
       "settings": {
-        "image": "shopify://shop_images/bitmap_beach.png",
         "title": ""
       }
     },
     "featured_products_9YFgNN": {
       "type": "featured-products",
       "settings": {
-        "title": "hendrix park industrial hitters",
+        "title": "",
         "subtitle": "",
         "cta_title": "",
         "cta_url": "",

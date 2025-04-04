@@ -12,9 +12,7 @@
     "sections": {
       "header": {
         "type": "header",
-        "settings": {
-          "primary_menu": ""
-        }
+        "settings": {}
       },
       "mobile-menu": {
         "type": "mobile-menu",
@@ -25,14 +23,7 @@
       },
       "footer": {
         "type": "footer",
-        "settings": {
-          "newsletter_title": "Newsletter Signup",
-          "newsletter_message": "",
-          "newsletter_success_message": "",
-          "socials_title": "Follow Us",
-          "socials_menu": "",
-          "copyright_text": ""
-        }
+        "settings": {}
       },
       "ajax-cart": {
         "type": "ajax-cart",
