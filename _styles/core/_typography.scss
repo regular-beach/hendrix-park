@@ -1,4 +1,15 @@
+
+@font-face {
+    font-family: 'HWYGOTH';
+    src: url('../assets/HYWGOTH.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+
 // Core Typography
-// h1, h2, h3, h4, h5, h6 {
-//   @apply font-bold;
-// }
+h1, h2, h3, h4, h5, h6 {
+@apply font;
+ }
+
+

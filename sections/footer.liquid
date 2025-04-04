@@ -3,9 +3,25 @@
 %}
 
 <footer class="footer">
-  <div class="container text-center py-4">
-    <p>Hendrix Park &copy; {{ current_year }}</p>
-    <p>Marinship Sausalito, USA</p>
-    <p id="current-datetime"></p>
+  <div class="container">
+    <div class="footer-grid">
+      
+      <!-- Copyright + Location (Centered on page) -->
+      <div class="footer-area__copyright">
+        <p>Hendrix Park &copy; {{ current_year }}</p>
+        <p>Marinship Sausalito, USA</p>
+        <p id="current-datetime"></p>
+      </div>
+
+      <!-- Instagram + Email (Right side on large screens) -->
+      <div class="footer-area__socials">
+        <ul>
+          <li><a href="https://instagram.com/yourhandle" target="_blank" class="hover:underline">Instagram</a></li>
+          <li><a href="mailto:you@example.com" class="hover:underline">you@example.com</a></li>
+        </ul>
+      </div>
+
+    </div>
   </div>
+
 </footer>
