@@ -2,11 +2,13 @@
   @apply flex flex-col gap-y-4 lg:gap-y-6 items-center my-8 lg:my-12 text-center;
 
   &__title {
-    @apply text-2xl lg:text-3xl font-bold;
+    @apply text-2xl lg:text-3xl font-normal;
+    font-family: 'HYWGOTH', sans-serif;
   }
 
   &__subtitle {
-    @apply font-medium;
+    @apply font-normal;
+    font-family: 'HYWGOTH', sans-serif;
   }
 
   &__actions {
