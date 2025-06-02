@@ -653,7 +653,7 @@ video {
     --header-height: 65px;
     --header-logo-width: 110px;
     --backdrop-color: #000;
-    --backdrop-opacity: 0.6;
+    --: 0.6;
   }
   @media (min-width: 768px) {
     :root {
