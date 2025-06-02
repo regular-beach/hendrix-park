@@ -8,30 +8,7 @@
     <img src="{{ 'HPLOGOBIG.png' | asset_url }}" alt="{{ shop.name }} logo">
   </a>
 
-  <div class="container">
-    <div class="header-main">
-      <div class="header-nav">
-        <nav class="header-nav__list" aria-label="Main" data-primary-nav>
-          <ul>
-            <li>
-              <a href="/blogs/news" class="header-nav__item">Blog</a>
-            </li>
-            {% for link in linklists[section.settings.primary_menu].links %}
-              <li>
-                <a
-                  href="{{ link.url }}"
-                  class="header-nav__item"
-                  {% if link.current %}
-                    aria-current="page"
-                  {% endif %}                  
-                >
-                  {{ link.title }}
-                </a>
-              </li>
-            {% endfor %}
-          </ul>
-        </nav>  
-      </div>
+  <div class="container"
     
       <div class="header-nav header-nav--right">
         <div class="header-nav__list">
