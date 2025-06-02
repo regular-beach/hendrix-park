@@ -13,8 +13,14 @@
       <div class="header-nav">
         <nav class="header-nav__list" aria-label="Main" data-primary-nav>
           <ul>
-            <li>
-              <a href="/blogs/news" class="header-nav__item">Blog</a>
+            <li class="header-nav__dropdown">
+              <button id="index-button" class="header-nav__item" aria-expanded="false">
+                Index
+              </button>
+              <ul id="dropdown-menu" class="header-nav__dropdown-menu hidden">
+                <li><a href="/pages/about" class="header-nav__item">About</a></li>
+                <li><a href="/blogs/news" class="header-nav__item">Blog</a></li>
+              </ul>
             </li>
             {% for link in linklists[section.settings.primary_menu].links %}
               <li>
@@ -49,3 +55,4 @@
     </div>
   </div>
 </header>
+
