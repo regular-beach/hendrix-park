@@ -1,10 +1,14 @@
 header.header {
-  @apply fixed z-header top-0 left-0 right-0 bg-white; // Removed opacity to remove blur
+ @apply fixed z-header top-0 left-0 right-0 bg-transparent;
   height: var(--header-height);
 }
 
 nav ul {
   @apply flex gap-x-2;
+}
+
+.header-nav__item a {
+  @apply text-white;
 }
 
 nav a[aria-current="page"] {
