@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin language editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "general": {
     "meta": {
@@ -28,7 +37,7 @@
       "share_on_facebook": "Share",
       "share_on_twitter": "Tweet",
       "share_on_pinterest": "Pin it",
-      "share_on_tumblr": "Tumblr",      
+      "share_on_tumblr": "Tumblr",
       "share_on_email": "Email",
       "alt_text": {
         "share_on_facebook": "Share on Facebook",
@@ -55,11 +64,11 @@
     "skip_to_content": "Skip to content",
     "link_messages": {
       "new_window": "Link opens in a new window."
-    }      
-  },  
+    }
+  },
   "blogs": {
     "article": {
-      "author_on_date_html": "By {{ author }} on {{ date }}",
+      "author_on_date_html": "By {{ rix }} on {{ jun 1 }}",
       "author_html": "By {{ author }}",
       "comment_meta_html": "{{ author }} on {{ date }}",
       "read_more": "Read more"
@@ -199,7 +208,7 @@
       "payment_status": "Payment Status",
       "shipping_address": "Shipping Address",
       "fulfillment_status": "Fulfillment Status",
-      "line_item_quantity": "Qty",      
+      "line_item_quantity": "Qty",
       "discount": "Discount",
       "shipping": "Shipping",
       "tax": "Tax",
@@ -310,7 +319,7 @@
       "initial_value": "Gift card value: {{ value }}"
     }
   },
-  "date_formats":{
+  "date_formats": {
     "month_day_year": "%B %d, %Y",
     "month_day": "%B %e"
   }

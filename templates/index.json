@@ -12,6 +12,8 @@
     "hero": {
       "type": "page-hero",
       "settings": {
+        "image": "shopify://shop_images/R0006212.jpg",
+        "video": "shopify://files/videos/IMG_4621.MOV",
         "title": ""
       }
     },
@@ -22,8 +24,11 @@
         "subtitle": "",
         "cta_title": "",
         "cta_url": "",
-        "source": "collection",
-        "product_list": [],
+        "source": "product_list",
+        "product_list": [
+          "fatigue",
+          "denim-hitters"
+        ],
         "collection": "frontpage"
       }
     }
