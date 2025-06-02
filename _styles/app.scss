@@ -61,7 +61,7 @@ $bp-xxxl: $bp-3xl;
   }
 
   body {
-    @apply font-normal bg-white text-black text-base;
+    @apply font-normal text-black text-base;
 
     text-rendering: optimizeLegibility;
     -moz-osx-font-smoothing: grayscale;
