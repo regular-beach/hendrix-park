@@ -1,10 +1,54 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
-      "type": "main-blog"
+      "type": "main-blog",
+      "settings": {}
+    },
+    "featured_products_MBWxrn": {
+      "type": "featured-products",
+      "name": "Featured Products",
+      "settings": {
+        "title": "Cilvillian clothes built for industrials",
+        "subtitle": "",
+        "cta_title": "",
+        "cta_url": "",
+        "source": "product_list",
+        "product_list": [],
+        "collection": ""
+      }
+    },
+    "main_product_9DxUG3": {
+      "type": "main-product",
+      "name": "Product - Main",
+      "settings": {}
+    },
+    "1748837716e8ce1242": {
+      "type": "apps",
+      "blocks": {
+        "shop_shop_login_button_app_block_PKHRCT": {
+          "type": "shopify://apps/shop/blocks/shop-login-button-app-block/7cab7c4a-1dfc-4b7e-8e53-31f104f2fa4e",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "shop_shop_login_button_app_block_PKHRCT"
+      ],
+      "settings": {}
     }
   },
   "order": [
-    "main"
+    "main",
+    "featured_products_MBWxrn",
+    "main_product_9DxUG3",
+    "1748837716e8ce1242"
   ]
 }
