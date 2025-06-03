@@ -1,8 +1,19 @@
 header.header {
  @apply fixed z-header top-0 left-0 right-0 bg-transparent;
   height: var(--header-height);
+
 }
 
+.header-main,
+.header-main::before,
+.header-main::after {
+  background: transparent !important;
+  background-color: transparent !important;
+  opacity: 1 !important;
+  filter: none !important;
+  backdrop-filter: none !important;
+  box-shadow: none !important;
+}
 nav ul {
   @apply flex gap-x-2;
 }

@@ -48,12 +48,6 @@ $bp-xxxl: $bp-3xl;
   }
 }
 
-.header-main,
-.header-main::before,
-.header-main::after {
-  background: transparent !important;
-  opacity: 1 !important;
-}
 
 @layer base {
   :focus,
