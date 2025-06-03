@@ -23,14 +23,16 @@
           endcapture
         -%}
 
-        {{
-          article.image
-          | image_url: width: 900
-          | image_tag:
-            widths: image_widths,
-            alt: alt_text,
-            class: 'h-full w-full object-cover lazy-image'
-        }}
+        {% if article.image %}
+  {{
+    article.image
+    | image_url: width: 900
+    | image_tag:
+      widths: image_widths,
+      alt: alt_text,
+      class: 'h-full w-full object-cover lazy-image'
+  }}
+{% endif %}
       </div>
       <div class="flex flex-col gap-y-2">
         <div class="text-sm uppercase">{{- article.published_at | time_tag: format: 'date' -}}</div>
