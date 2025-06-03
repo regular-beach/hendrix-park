@@ -12,29 +12,9 @@
     "main": {
       "type": "main-blog",
       "settings": {}
-    },
-    "featured_products_MBWxrn": {
-      "type": "featured-products",
-      "name": "Featured Products",
-      "settings": {
-        "title": "Cilvillian clothes built for industrials",
-        "subtitle": "",
-        "cta_title": "",
-        "cta_url": "",
-        "source": "collection",
-        "product_list": [],
-        "collection": ""
-      }
-    },
-    "main_product_9DxUG3": {
-      "type": "main-product",
-      "name": "Product - Main",
-      "settings": {}
     }
   },
   "order": [
-    "main",
-    "featured_products_MBWxrn",
-    "main_product_9DxUG3"
+    "main"
   ]
 }
