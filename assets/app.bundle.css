@@ -650,8 +650,8 @@ video {
     --lazy-image-transition-timing-function: cubic-bezier(0.42, 0.33, 0.21, 0.82);
     --lazy-image-transition-duration: 0.32s;
     --lazy-image-transition: opacity var(--lazy-image-transition-timing-function, ease-in) var(--lazy-image-transition-duration, 0.25s);
-    --header-height: 200px;
-    --header-logo-width: 400px;
+    --header-height: 100px;
+    --header-logo-width: 200px;
     --backdrop-color: #000;
     --: 0.6;
   }

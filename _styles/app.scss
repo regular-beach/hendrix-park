@@ -36,11 +36,11 @@ $bp-xxxl: $bp-3xl;
     --lazy-image-transition-duration: 0.32s;
     --lazy-image-transition: opacity var(--lazy-image-transition-timing-function, ease-in) var(--lazy-image-transition-duration, 0.25s);    
 
-    --header-height: 200px;
-    --header-logo-width: 400px;
+    --header-height: 100px;
+    --header-logo-width: 200px;
 
     @media (min-width: $bp-xl) {
-      --header-logo-width: 400px;
+      --header-logo-width: 200px;
     }
 
     --backdrop-color: #000;
