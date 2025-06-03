@@ -1767,7 +1767,7 @@ img.lazy-image.is-loaded {
 }
 
 header.header {
-  position: fixed;
+  position: relative;
   top: 0px;
   left: 0px;
   right: 0px;
