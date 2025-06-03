@@ -1824,6 +1824,10 @@ header.header nav a[aria-current=page] {
   align-items: center;
 }
 
+.page-hero{
+  height: 350px;
+}
+
 .footer {
   --grid-column-gap: 4vw;
   padding-top: 2.5rem;
