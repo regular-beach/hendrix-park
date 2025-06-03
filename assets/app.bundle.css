@@ -1772,7 +1772,7 @@ header.header {
   left: 0px;
   right: 0px;
   z-index: 100;
-  background-color: rgb(255 255 255 / 0.5);
+  
   height: var(--header-height);
 }
 header.header nav ul {
