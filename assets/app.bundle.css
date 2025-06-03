@@ -955,7 +955,7 @@ video {
   height: 1rem;
 }
 
-.h-5 {
+.h-hero {
   height: 350px;
 }
 
@@ -1829,9 +1829,6 @@ header.header nav a[aria-current=page] {
   align-items: center;
 }
 
-.page-hero{
-  height: 350px;
-}
 
 .footer {
   --grid-column-gap: 4vw;
