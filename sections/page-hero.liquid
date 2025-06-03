@@ -1,13 +1,13 @@
 <div
   data-section-id="{{ section.id }}"
   data-section-type="page-hero"
-  class="pt-[var(--header-height)]"
+  class="pt-[100px]"
 >
-<div class="relative h-[30vh] min-h-[500px] flex flex-col items-center justify-end pt-12 text-white">
+  <div class="relative h-[30vh] min-h-[500px] flex flex-col items-center justify-end pt-12 text-white">
     {% render 'graphic-cover'
-                image: section.settings.image,
-                image_mobile: section.settings.image_mobile,
-                video: section.settings.video
+      image: section.settings.image,
+      image_mobile: section.settings.image_mobile,
+      video: section.settings.video
     %}
 
     <div class="relative z-2 py-12">
@@ -19,6 +19,7 @@
     </div>
   </div>
 </div>
+
 
 {% schema %}
   {
