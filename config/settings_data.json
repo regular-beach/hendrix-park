@@ -9,6 +9,7 @@
  */
 {
   "current": {
+    "favicon_image": "shopify://shop_images/HPweblogo2.png",
     "sections": {
       "header": {
         "type": "header",

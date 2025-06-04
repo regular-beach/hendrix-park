@@ -10,8 +10,10 @@
 {
   "sections": {
     "main": {
-      "type": "main-blog",
-      "settings": {}
+      "type": "main-article",
+      "settings": {
+        "show_author": false
+      }
     }
   },
   "order": [
