@@ -12,8 +12,8 @@
     "hero": {
       "type": "page-hero",
       "settings": {
-        "image": "shopify://shop_images/R0006212.jpg",
-        "video": "shopify://files/videos/IMG_7969.mov",
+        "image": "shopify://shop_images/R0006270.jpg",
+        "image_mobile": "shopify://shop_images/R0006270.jpg",
         "title": ""
       }
     },
