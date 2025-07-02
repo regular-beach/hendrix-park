@@ -85,7 +85,7 @@
   {% comment %} Radio options require a fieldset since they use a list of inputs, each with their own label {% endcomment %}
   {% if is_radio %}
     <fieldset>
-      <legend style="font-weight: bold">
+      <legend style="font-weight: normal">
         {{ option_label_content }}
       </legend>
 
@@ -93,7 +93,7 @@
     </fieldset>
   {% else %}
     <div>
-      <label for="{{ option_select_id }}" style="font-weight: bold">
+      <label for="{{ option_select_id }}" style="font-weight: normal">
         {{ option_label_content }}
       </label>
 

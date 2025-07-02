@@ -33,11 +33,11 @@
       <div class="lg:sticky lg:top-0">
         <div class="container">
           <div class="lg:pt-28">
-            <h1 class="mb-2 text-center lg:text-left text-2xl uppercase font-bold">
+            <h1 class="mb-2 text-center lg:text-left text-2xl font-normal">
               {{ product.title }}
             </h1>
 
-            <div class="text-center lg:text-left text-xl">
+            <div class="text-center lg:text-left text-xl font-italic">
               {% render 'product-detail-price',
                         product: product,
                         current_variant: current_variant
