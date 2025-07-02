@@ -54,39 +54,44 @@
 
   <!-- Variant Picker -->
   <div class="flex flex-col lg:flex-row lg:gap-4 lg:flex-wrap lg:items-end lg:flex-1">
-    <div data-component="variant-picker"
-      {% if product.has_only_default_variant %}
-        style="display: flex;"
-        aria-hidden="true"
-      {% endif %}
-    >
+    <div class="flex flex-col lg:flex-row lg:gap-4 lg:items-end lg:flex-wrap lg:flex-1">
+  <div data-component="variant-picker"
+    {% if product.has_only_default_variant %}
+      style="display: flex;"
+      aria-hidden="true"
+    {% endif %}
+  >
+    <!-- FLEX: variant options side by side -->
+    <div class="flex flex-col lg:flex-row lg:gap-4 flex-wrap w-full">
       {% for option in product.options_with_values %}
         {% assign option_name_handle = option.name | handle %}
         {% assign selection_type = 'select' %}
         {% if option_name_handle == 'color' %}
           {% assign selection_type = 'radio' %}
         {% endif %}
-        <div>
+
+        <div class="min-w-[150px]">
           {% render 'variant-picker-option', option: option, selection_type: selection_type %}
         </div>
       {% endfor %}
     </div>
-
-    <label class="sr-only" for="no-js-variant-select">Select Variant</label>
-    <select name="id" class="no-js" id="no-js-variant-select" class="mt-2 lg:mt-0">
-      {% for variant in product.variants %}
-        <option
-          {% if variant == current_variant %}selected="selected"{% endif %}
-          {% unless variant.available %}disabled="disabled"{% endunless %}
-          value="{{ variant.id }}"
-        >
-          {{ variant.title }}
-        </option>
-      {% endfor %}
-    </select>
-
-    <input type="hidden" value="1" name="quantity" />
   </div>
+
+  <label class="sr-only" for="no-js-variant-select">Select Variant</label>
+  <select name="id" class="no-js" id="no-js-variant-select" class="mt-2 lg:mt-0">
+    {% for variant in product.variants %}
+      <option
+        {% if variant == current_variant %}selected="selected"{% endif %}
+        {% unless variant.available %}disabled="disabled"{% endunless %}
+        value="{{ variant.id }}"
+      >
+        {{ variant.title }}
+      </option>
+    {% endfor %}
+  </select>
+
+  <input type="hidden" value="1" name="quantity" />
+</div>
 
   <!-- Add to Cart Button -->
   <button
