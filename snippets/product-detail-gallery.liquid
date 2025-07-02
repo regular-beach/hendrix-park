@@ -84,10 +84,9 @@
         
         {% comment %} @TODO - Convert 'is-active' to aria-selected ? {% endcomment %}
 
-        <div class="lg:sticky lg:top-28 self-start h-fit">
-
+        
         <div
-          class="product-detail-gallery{% if is_active %} is-active{% endif %}"
+          class="product-detail-gallery{% if is_active %} is-active{% endif %} lg:sticky"
           data-component="product-detail-gallery"
           data-color="{{ color }}"
         >
@@ -144,4 +143,3 @@
     </div>   
   </div>    
 {% endif %}
-        </div>
