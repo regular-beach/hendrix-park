@@ -55,26 +55,33 @@
   <!-- Variant Picker -->
   <div class="flex flex-col lg:flex-row lg:gap-4 lg:flex-wrap lg:items-end lg:flex-1">
     <div class="flex flex-col lg:flex-row lg:gap-4 lg:items-end lg:flex-wrap lg:flex-1">
-  <div data-component="variant-picker"
-    {% if product.has_only_default_variant %}
-      style="display: flex;"
-      aria-hidden="true"
-    {% endif %}
-  >
-    <!-- FLEX: variant options side by side -->
-    <div class="flex flex-col lg:flex-row lg:gap-4 flex-wrap w-full">
-      {% for option in product.options_with_values %}
-        {% assign option_name_handle = option.name | handle %}
-        {% assign selection_type = 'select' %}
-        {% if option_name_handle == 'color' %}
-          {% assign selection_type = 'radio' %}
-        {% endif %}
+<!-- Variant Picker Container -->
+<div
+  data-component="variant-picker"
+  {% if product.has_only_default_variant %}
+    style="display: flex;"
+    aria-hidden="true"
+  {% endif %}
+>
 
-        <div class="min-w-[150px]">
-          {% render 'variant-picker-option', option: option, selection_type: selection_type %}
-        </div>
-      {% endfor %}
-    </div>
+  <!-- Add flex wrapper for options -->
+  <div class="flex flex-col lg:flex-row flex-wrap gap-4">
+
+    {% for option in product.options_with_values %}
+      {% assign option_name_handle = option.name | handle %}
+      {% assign selection_type = 'select' %}
+      {% if option_name_handle == 'color' %}
+        {% assign selection_type = 'radio' %}
+      {% endif %}
+
+      <div class="min-w-[180px] flex-1">
+        {% render 'variant-picker-option', option: option, selection_type: selection_type %}
+      </div>
+    {% endfor %}
+
+  </div>
+</div>
+
   </div>
 
   <label class="sr-only" for="no-js-variant-select">Select Variant</label>
