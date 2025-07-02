@@ -49,27 +49,29 @@
               <meta itemprop="price" content="{{ current_variant.price | divided_by: 100.00 }}">
               <link itemprop="availability" href="http://schema.org/{% if current_variant.available %}InStock{% else %}OutOfStock{% endif %}">
 
-             <!-- Flex container for variant picker and ATC button -->
+              <!-- Flex container for variant picker and ATC button -->
 <div class="flex flex-col lg:flex-row lg:items-end lg:gap-4 mt-6">
 
-  <!-- Variant Picker + select + quantity -->
-  <div class="lg:flex-1" data-component="variant-picker"
-    {% if product.has_only_default_variant %}
-      style="display: flex;"
-      aria-hidden="true"
-    {% endif %}
-  >
-    {% for option in product.options_with_values %}
-      {% assign option_name_handle = option.name | handle %}
-      {% assign selection_type = 'select' %}
-      {% if option_name_handle == 'color' %}
-        {% assign selection_type = 'radio' %}
+  <!-- Variant Picker and Variant <select> -->
+  <div class="lg:flex-1">
+    <div data-component="variant-picker"
+      {% if product.has_only_default_variant %}
+        style="display: flex;"
+        aria-hidden="true"
       {% endif %}
+    >
+      {% for option in product.options_with_values %}
+        {% assign option_name_handle = option.name | handle %}
+        {% assign selection_type = 'select' %}
+        {% if option_name_handle == 'color' %}
+          {% assign selection_type = 'radio' %}
+        {% endif %}
 
-      <div>
-        {% render 'variant-picker-option', option: option, selection_type: selection_type %}
-      </div>
-    {% endfor %}
+        <div>
+          {% render 'variant-picker-option', option: option, selection_type: selection_type %}
+        </div>
+      {% endfor %}
+    </div>
 
     <label class="sr-only" for="no-js-variant-select">Select Variant</label>
     <select name="id" class="no-js" id="no-js-variant-select">
@@ -92,9 +94,9 @@
     type="submit"
     name="add"
     class="btn mt-4 lg:mt-0"
-    {% if current_variant.available == false %}
+    {% unless current_variant.available %}
       disabled="disabled"
-    {% endif %}
+    {% endunless %}
     data-component="atc-button"
   >
     <span data-label>
