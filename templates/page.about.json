@@ -10,8 +10,7 @@
 {
   "sections": {
     "main": {
-      "type": "main-404",
-      "disabled": true,
+      "type": "main-page",
       "settings": {}
     }
   },

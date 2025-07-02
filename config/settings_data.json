@@ -29,9 +29,9 @@
       "ajax-cart": {
         "type": "ajax-cart",
         "settings": {
-          "checkout_button_text": "Proceed To Checkout",
+          "checkout_button_text": "buy now",
           "checkout_message": "",
-          "empty_text": "Looks like you have some shopping to do."
+          "empty_text": "cart empty."
         }
       }
     },
