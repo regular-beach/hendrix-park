@@ -30,14 +30,14 @@
     data-component="product-detail-form"
   >
     {% form 'product', product, style: 'height: 100%' %} 
-      <div class="lg:sticky lg:top-0">
+      <div class="lg:sticky lg:top-0 py-2">
         <div class="container">
           <div class="lg:pt-28">
             <h1 class="mb-2 text-center lg:text-left text-2xl font-normal">
               {{ product.title }}
             </h1>
 
-            <div class="text-center lg:text-left text-xl font-italic">
+            <div class="text-center lg:text-left text-xl font-normal italic">
               {% render 'product-detail-price',
                         product: product,
                         current_variant: current_variant

@@ -1427,7 +1427,7 @@ button[disabled] {
     border-color: rgb(0 0 0 / var(--tw-border-opacity));
     --tw-bg-opacity: 1;
     background-color: rgb(rgb(136, 189, 136) / var(--tw-bg-opacity));
-    color: white;
+    color: rgb(0, 111, 0);
   }
 }
 .btn:not([disabled]):active {
