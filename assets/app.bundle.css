@@ -2064,9 +2064,9 @@ header.header nav a[aria-current=page] {
   display: block;
 }
 .product-detail-gallery .swiper-container {
-  position: sticky;
+  position: relative;
   width: 100%;
-  overflow: hidden;
+  overflow: visible;
 }
 @media (min-width: 1024px) {
 
