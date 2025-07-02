@@ -49,11 +49,11 @@
               <meta itemprop="price" content="{{ current_variant.price | divided_by: 100.00 }}">
               <link itemprop="availability" href="http://schema.org/{% if current_variant.available %}InStock{% else %}OutOfStock{% endif %}">
 
-              <!-- Flex container for variant picker and ATC button -->
-<div class="flex flex-col lg:flex-row lg:items-end lg:gap-4 mt-6">
+              <!-- FLEX WRAPPER -->
+<div class="flex flex-col lg:flex-row lg:items-end lg:gap-4 mt-6 flex-wrap">
 
-  <!-- Variant Picker and Variant <select> -->
-  <div class="lg:flex-1">
+  <!-- Variant Picker -->
+  <div class="flex flex-col lg:flex-row lg:gap-4 lg:flex-wrap lg:items-end lg:flex-1">
     <div data-component="variant-picker"
       {% if product.has_only_default_variant %}
         style="display: flex;"
@@ -66,7 +66,6 @@
         {% if option_name_handle == 'color' %}
           {% assign selection_type = 'radio' %}
         {% endif %}
-
         <div>
           {% render 'variant-picker-option', option: option, selection_type: selection_type %}
         </div>
@@ -74,7 +73,7 @@
     </div>
 
     <label class="sr-only" for="no-js-variant-select">Select Variant</label>
-    <select name="id" class="no-js" id="no-js-variant-select">
+    <select name="id" class="no-js" id="no-js-variant-select" class="mt-2 lg:mt-0">
       {% for variant in product.variants %}
         <option
           {% if variant == current_variant %}selected="selected"{% endif %}
@@ -94,9 +93,9 @@
     type="submit"
     name="add"
     class="btn mt-4 lg:mt-0"
-    {% unless current_variant.available %}
+    {% if current_variant.available == false %}
       disabled="disabled"
-    {% endunless %}
+    {% endif %}
     data-component="atc-button"
   >
     <span data-label>
@@ -107,4 +106,30 @@
       {% endif %}
     </span>
   </button>
+
 </div>
+
+
+                <div>
+                  <div>
+                    {{ form | payment_terms }}
+                  </div>
+                </div>
+
+              {% if product.description != blank %}
+                <div>
+                  {{ product.description }}
+                </div>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <script type="application/json" data-product-json>
+        {% render 'product-json-lite', product: product %}
+      </script>      
+    {% endform %}
+  </div>
+
+{% endunless %}
