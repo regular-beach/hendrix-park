@@ -1448,6 +1448,8 @@ button[disabled] {
 
 label {
   display: inline-block;
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
 }
 
 input[type=search]::-webkit-search-cancel-button {
