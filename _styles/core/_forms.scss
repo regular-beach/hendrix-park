@@ -55,7 +55,7 @@ input[type="number"] {
 // This wraps the input, icon, etc.
 // Markup / styling is heavily inspired by -> https://primer.style/components/text-input/react/alpha
 .form-control {
-  @apply relative w-full flex items-stretch gap-x-2 appearance-none overflow-hidden;
+  @apply relative w-25% flex items-stretch gap-x-2 appearance-none overflow-hidden;
   @apply border-[#a5a5a5] rounded;
   @apply text-black;
 
