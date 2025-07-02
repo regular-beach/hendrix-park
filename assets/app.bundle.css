@@ -1504,7 +1504,7 @@ input[type=number] {
 .form-control {
   position: relative;
   display: flex;
-  width: 100%;
+  width: 25%;
   appearance: none;
   align-items: stretch;
   column-gap: 0.5rem;
@@ -1512,7 +1512,7 @@ input[type=number] {
   border-radius: 0.25rem;
   border-width: 1px;
   --tw-border-opacity: 1;
-  border-color: rgb(0 0 0 / var(--tw-border-opacity));
+  border-color: rgb(gray / var(--tw-border-opacity));
   --tw-text-opacity: 1;
   color: rgb(0 0 0 / var(--tw-text-opacity));
   transition-property: background-color, border-color, color;
