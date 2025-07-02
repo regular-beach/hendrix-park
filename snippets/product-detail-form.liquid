@@ -49,42 +49,24 @@
               <meta itemprop="price" content="{{ current_variant.price | divided_by: 100.00 }}">
               <link itemprop="availability" href="http://schema.org/{% if current_variant.available %}InStock{% else %}OutOfStock{% endif %}">
 
-              <div
-                data-component="variant-picker"
-                {% if product.has_only_default_variant %}
-                  style="display: flex;"
-                  aria-hidden="true"
-                {% endif %}
-              >
-                {% for option in product.options_with_values %}
-                  {%- liquid
-                    assign option_name_handle = option.name | handle
-                    assign hide_option = false
-                    assign selection_type = 'select'
+              <!-- Flex container for variant picker and ATC button -->
+<div class="flex flex-col lg:flex-row lg:items-end lg:gap-4 mt-6">
 
-                    if option_name_handle == 'color'
-                      assign selection_type = 'radio'
-                    endif
-
-                    comment
-                      Add any logic needed to hide specific options
-                    endcomment
-                  -%}
-                  
-                  <div
-                    {% if hide_option %}
-                      style="display: none;"
-                      aria-hidden="true"
-                    {% endif %}
-                  >
-
-                    {% render 'variant-picker-option',
-                              option: option,
-                              selection_type: selection_type
-                    %}                
-                  </div>
-                {% endfor %}
-              </div>
+  <!-- Variant Picker -->
+  <div class="lg:flex-1" data-component="variant-picker"
+    {% if product.has_only_default_variant %}
+      style="display: flex;"
+      aria-hidden="true"
+    {% endif %}
+  >
+    {% for option in product.options_with_values %}
+      {% assign option_name_handle = option.name | handle %}
+      {% assign selection_type = option_name_handle == 'color' ? 'radio' : 'select' %}
+      <div>
+        {% render 'variant-picker-option', option: option, selection_type: selection_type %}
+      </div>
+    {% endfor %}
+  </div>
 
                 <label class="sr-only" for="no-js-variant-select">Select Variant</label>
                 <select name="id" class="no-js" id="no-js-variant-select">
@@ -101,23 +83,26 @@
 
                 <input type="hidden" value="1" name="quantity" />
 
-                <button
-                  type="submit"
-                  name="add"
-                  class="btn"
-                  {% if current_variant.available == false %}
-                    disabled="disabled"
-                  {% endif %}
-                  data-component="atc-button"
-                >
-                  <span data-label>
-                    {% if current_variant.available %}
-                      Add To Cart
-                    {% else %}
-                      Sold Out
-                    {% endif %}
-                  </span>
-                </button>  
+               <!-- Add to Cart Button -->
+  <button
+    type="submit"
+    name="add"
+    class="btn mt-4 lg:mt-0"
+    {% if current_variant.available == false %}
+      disabled="disabled"
+    {% endif %}
+    data-component="atc-button"
+  >
+    <span data-label>
+      {% if current_variant.available %}
+        Add To Cart
+      {% else %}
+        Sold Out
+      {% endif %}
+    </span>
+  </button>
+
+</div>
 
                 <div>
                   <div>
