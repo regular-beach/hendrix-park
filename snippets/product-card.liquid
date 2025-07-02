@@ -76,7 +76,7 @@
 
       <a href="{{ product_url }}" title="{{ product.title }}">
         <div class="text-center px-4">
-          <div class="font-bold">{{ product.title }}</div>
+          <div class="font-normal">{{ product.title }}</div>
           <div>
             {% if product.available %}
               {{ product.selected_or_first_available_variant.price | money_without_trailing_zeros }}

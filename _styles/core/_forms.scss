@@ -35,7 +35,7 @@ input[type="number"] {
   }
 
   label {
-    @apply font-medium text-black mb-1 text-sm;
+    @apply font-normal text-green-900 mb-1 text-sm;
   }
 
   &__helper,
@@ -56,7 +56,7 @@ input[type="number"] {
 // Markup / styling is heavily inspired by -> https://primer.style/components/text-input/react/alpha
 .form-control {
   @apply relative w-full flex items-stretch gap-x-2 appearance-none overflow-hidden;
-  @apply border border-black rounded;
+  @apply border-[#a5a5a5] rounded;
   @apply text-black;
 
   transition: {
