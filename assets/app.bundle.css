@@ -1394,15 +1394,16 @@ button[disabled] {
   border-radius: 0.125rem;
   border-width: 1px;
   padding-top: 0.75rem;
+  margin-top: 1.5em;
   padding-bottom: 0.75rem;
   padding-left: 1.25rem;
   padding-right: 1.25rem;
   --tw-border-opacity: 1;
-  border-color: rgb(34 34 34 / var(--tw-border-opacity));
+  border-color: rgb(grey / var(--tw-border-opacity));
   --tw-bg-opacity: 1;
-  background-color: rgb(68 68 68 / var(--tw-bg-opacity));
+  background-color: rgb(white / var(--tw-bg-opacity));
   --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
+  color: rgb(black / var(--tw-text-opacity));
   font-size: 0.875rem;
   line-height: 1.25rem;
   font-weight: 400;
@@ -1426,6 +1427,7 @@ button[disabled] {
     border-color: rgb(0 0 0 / var(--tw-border-opacity));
     --tw-bg-opacity: 1;
     background-color: rgb(rgb(136, 189, 136) / var(--tw-bg-opacity));
+    color: white;
   }
 }
 .btn:not([disabled]):active {
