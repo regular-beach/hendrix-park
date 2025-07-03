@@ -48,7 +48,7 @@
 
 {% comment %} If possible, make a gallery for each color option value {% endcomment %}
 <div class="lg:grid lg:grid-cols-2 lg:gap-8">
-  <div class="lg:sticky lg:top-28">
+  <div class="lg:sticky lg:top-0">
     {% if color_galleries_possible %}
   {% for option in product.options_with_values %}
     {% assign option_name_upcase = option.name | upcase %}
@@ -83,7 +83,7 @@
             endif
           endfor
         -%}
-        </div>
+        
         
         {% comment %} @TODO - Convert 'is-active' to aria-selected ? {% endcomment %}
 
@@ -107,6 +107,8 @@
     {% endif %}
   {% endfor %}
 {% else %}
+</div>
+</div>
   {%- liquid
  
     comment
