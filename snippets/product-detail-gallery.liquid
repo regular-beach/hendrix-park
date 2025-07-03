@@ -47,6 +47,7 @@
 %}
 
 {% comment %} If possible, make a gallery for each color option value {% endcomment %}
+ <div class="lg:sticky lg:top-0">
 {% if color_galleries_possible %}
   {% for option in product.options_with_values %}
     {% assign option_name_upcase = option.name | upcase %}
@@ -85,7 +86,7 @@
         
         {% comment %} @TODO - Convert 'is-active' to aria-selected ? {% endcomment %}
 
-        <div class="lg:sticky lg:top-0">
+        
         <div
           class="product-detail-gallery{% if is_active %} is-active{% endif %} lg:sticky lg:top-0"
           data-component="product-detail-gallery"
