@@ -47,8 +47,9 @@
 %}
 
 {% comment %} If possible, make a gallery for each color option value {% endcomment %}
- <div class="lg:sticky lg:top-0">
-{% if color_galleries_possible %}
+<div class="lg:grid lg:grid-cols-2 lg:gap-8">
+  <div class="lg:sticky lg:top-28">
+    {% if color_galleries_possible %}
   {% for option in product.options_with_values %}
     {% assign option_name_upcase = option.name | upcase %}
     {% assign option_position_label = 'option' | append: option.position %}
@@ -107,6 +108,7 @@
   {% endfor %}
 {% else %}
   {%- liquid
+ 
     comment
       Make one gallery for all colors ....
     endcomment
