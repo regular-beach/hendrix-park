@@ -81,10 +81,11 @@
             endif
           endfor
         -%}
+        </div>
         
         {% comment %} @TODO - Convert 'is-active' to aria-selected ? {% endcomment %}
 
-        
+        <div class="lg:sticky lg:top-0">
         <div
           class="product-detail-gallery{% if is_active %} is-active{% endif %} lg:sticky lg:top-0"
           data-component="product-detail-gallery"

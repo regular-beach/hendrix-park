@@ -1,27 +1,22 @@
 {%- liquid
   assign current_variant = product.selected_or_first_available_variant
--%}
+%}
 
 <div data-section-id="{{ section.id }}" data-section-type="product">
-  <!-- Use Grid instead of Flex -->
-  <div class="lg:grid lg:grid-cols-2 lg:gap-8">
-  
-    <!-- GALLERY COLUMN (sticky on large screens) -->
-    <div class="lg:sticky lg:top-28">
+  <div class="lg:flex">
+    <div class="lg:flex-1 lg:sticky lg:top-0">
       {% render 'product-detail-gallery',
                  product: product,
                  current_variant: current_variant
       %}
     </div>
 
-    <!-- FORM COLUMN -->
-    <div>
+    <div class="lg:flex-1">
       {% render 'product-detail-form',
                  product: product,
                  current_variant: current_variant
       %}
     </div>
-
   </div>
 
   <script type="application/ld+json">
