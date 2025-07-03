@@ -2050,6 +2050,7 @@ header.header nav a[aria-current=page] {
 }
 .product-detail-gallery {
   margin-bottom: 1.25rem;
+  position: sticky;
 }
 @media (min-width: 1024px) {
 
@@ -2064,7 +2065,7 @@ header.header nav a[aria-current=page] {
   display: block;
 }
 .product-detail-gallery .swiper-container {
-  position: relative;
+  
   width: 100%;
   overflow: visible;
 }
