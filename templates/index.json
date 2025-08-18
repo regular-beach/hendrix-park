@@ -24,10 +24,11 @@
         "subtitle": "",
         "cta_title": "",
         "cta_url": "",
-        "source": "product_list",
+        "source": "collection",
         "product_list": [
           "fatigue",
-          "denim-hitters"
+          "denim-hitters",
+          "selvedge-khaki-trousers"
         ],
         "collection": "frontpage"
       }
